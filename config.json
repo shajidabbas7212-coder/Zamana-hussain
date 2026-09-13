@@ -1,0 +1,46 @@
+{
+  "appName": "Zamana Hussain - Domain Management",
+  "version": "1.0.0",
+  "author": "Zamana Hussain",
+  "description": "ایک مکمل Domain Management System",
+  "features": [
+    "Domain کی تفصیلات محفوظ کریں",
+    "DNS ریکارڈز منیج کریں",
+    "Domain Expiry کی یادیں",
+    "Multiple Domains کو ہینڈل کریں",
+    "Domain Health Check"
+  ],
+  "settings": {
+    "language": "ur",
+    "timezone": "Asia/Karachi",
+    "dateFormat": "DD/MM/YYYY",
+    "storageType": "localStorage",
+    "maxDomains": 100
+  },
+  "dnsRecords": [
+    {
+      "type": "A",
+      "name": "@",
+      "value": "192.168.1.1",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "value": "example.com",
+      "ttl": 3600
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "value": "mail.example.com",
+      "priority": 10,
+      "ttl": 3600
+    }
+  ],
+  "expiryWarnings": {
+    "daysBeforeExpiry": 30,
+    "enableEmailNotification": true,
+    "enableBrowserNotification": true
+  }
+}
